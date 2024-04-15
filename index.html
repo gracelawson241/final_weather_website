@@ -25,17 +25,24 @@
           <input type="submit" value="search" class="search-button" />
         </form>
       </header>
-      <hr />
+
       <main>
-        <h1>City</h1>
-        <p>
-          Monday 00:00, sunny
-          <br />
-          Humidity: 0%, Wind: 0.0km/h
-        </p>
-        <div>☀️ 00°C</div>
+        <div>
+          <h1 id="city">City</h1>
+          <p class="weather-breakdown">
+            Monday 00:00, sunny
+            <br />
+            Humidity: <strong class="emphasis">0%</strong>, Wind:
+            <strong class="emphasis">0.0km/h</strong>
+          </p>
+        </div>
+        <div class="temperature-basics">
+          <div id="weather-img">☀️</div>
+          <div id="temperature">00</div>
+          <div id="unit">°C</div>
+        </div>
       </main>
-      <hr />
+
       <footer>
         Coded by
         <a href="https://github.com/gracelawson241" target="_blank"
