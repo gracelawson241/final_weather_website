@@ -4,42 +4,55 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="src/styles.css" />
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <header>
-      <form>
-        <input type="search" placeholder="please enter a city..." required />
-        <input type="submit" value="search" />
-      </form>
-    </header>
-
-    <main>
-      <h1>City</h1>
-      <p>
-        Monday 00:00, sunny
-        <br />
-        Humidity: 0%, Wind: 0.0km/h
-      </p>
-      <div>☀️ 00°C</div>
-    </main>
-
-    <footer>
-      Coded by
-      <a href="https://github.com/gracelawson241" target="_blank"
-        >Grace Lawson</a
-      >
-      and is open-hosted by
-      <a
-        href="https://github.com/gracelawson241/final_weather_website"
-        target="_blank"
-        >Github</a
-      >
-      and website hosted by
-      <a href="https://graceweatherproject.netlify.app/" target="_blank"
-        >Netlify</a
-      >.
-    </footer>
+    <div class="weather-app">
+      <header>
+        <form class="search-form">
+          <input
+            type="search"
+            placeholder="please enter a city..."
+            required
+            class="search-input"
+          />
+          <input type="submit" value="search" class="search-button" />
+        </form>
+      </header>
+      <hr />
+      <main>
+        <h1>City</h1>
+        <p>
+          Monday 00:00, sunny
+          <br />
+          Humidity: 0%, Wind: 0.0km/h
+        </p>
+        <div>☀️ 00°C</div>
+      </main>
+      <hr />
+      <footer>
+        Coded by
+        <a href="https://github.com/gracelawson241" target="_blank"
+          >Grace Lawson</a
+        >
+        and is open-hosted by
+        <a
+          href="https://github.com/gracelawson241/final_weather_website"
+          target="_blank"
+          >Github</a
+        >
+        and website hosted by
+        <a href="https://graceweatherproject.netlify.app/" target="_blank"
+          >Netlify</a
+        >.
+      </footer>
+    </div>
     <script src="app.js"></script>
   </body>
 </html>

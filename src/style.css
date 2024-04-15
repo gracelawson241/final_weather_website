@@ -1,0 +1,32 @@
+body {
+  background-color: #bed1e3;
+}
+
+a {
+  color: #ddd5f3;
+}
+
+.weather-app {
+  background: #92a1c3;
+  max-width: 60%;
+  margin: 0 auto;
+  margin-top: 80px;
+  padding: 20px;
+  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.1);
+  border-radius: 16px;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+.search-form {
+}
+
+.search-input {
+  background-color: #bed1e3;
+  border: none;
+  border-radius: 6px;
+  max-width: 60%;
+}
+
+.search-button {
+}
