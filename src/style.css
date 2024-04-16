@@ -77,9 +77,12 @@ a {
 
 #temperature {
   font-size: 70px;
-  line-height: 70px;
   font-weight: bold;
   display: block;
+}
+
+#weather-img {
+  font-size: 70px;
 }
 
 #unit {
