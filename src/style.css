@@ -25,7 +25,7 @@ a {
 
 .weather-app {
   background: #92a1c3;
-  max-width: 55%;
+  max-width: 70%;
   margin: 0 auto;
   margin-top: 80px;
   padding: 20px;
@@ -91,4 +91,8 @@ a {
 #city {
   margin: 0;
   font-size: 50px;
+}
+
+#main {
+  max-width: 70%;
 }
