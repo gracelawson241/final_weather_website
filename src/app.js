@@ -21,6 +21,8 @@ function refreshWeather(response) {
   let iconElement = document.querySelector("#icon");
 
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
+
+  getForecast(response.data.city);
 }
 
 function formatDate(date) {
@@ -52,6 +54,13 @@ function searchCity(city) {
   axios.get(apiUrl).then(refreshWeather);
 }
 
+function getForecast(city) {
+  let apiKey = "faa6632e6o4d4eb073bt724d3e3780ff";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=imperial`;
+
+  axios(apiUrl).then(displayForecast);
+}
+
 function cityReplacer(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-input");
@@ -63,7 +72,9 @@ function cityReplacer(event) {
 let user_input_city = document.querySelector("#search-form");
 user_input_city.addEventListener("submit", cityReplacer);
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data);
+
   let forecast = document.querySelector("#forecast");
 
   let forecastDays = ["Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
@@ -90,4 +101,5 @@ function displayForecast() {
 }
 
 searchCity("Columbus");
+getForecast("Columbus");
 displayForecast();
