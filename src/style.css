@@ -76,6 +76,28 @@ a {
   padding: 8vh;
 }
 
+.forecast {
+  text-align: center;
+  margin-top: 25px;
+  line-height: 50%;
+  font-size: 13px;
+  color: white;
+}
+
+.forecast-date {
+  font-size: 16px;
+  opacity: 0.5;
+  margin-bottom: -5px;
+}
+
+.maximum-forecast-temp {
+  opacity: 100%;
+}
+
+.minimum-forecast-temp {
+  opacity: 0.5;
+}
+
 #temperature {
   font-size: 70px;
   font-weight: bold;
@@ -87,9 +109,19 @@ a {
 }
 
 #unit {
-  margin-top: 6px;
   font-size: 28px;
-  display: block;
+  color: white;
+  background-color: #92a1c3;
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+  height: 45px;
+  width: 45px;
+  position: relative;
+}
+
+#unit:hover {
+  cursor: pointer;
 }
 
 #city {
