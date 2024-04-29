@@ -105,6 +105,13 @@ a {
   opacity: 0.5;
 }
 
+.weather-forecast-icon {
+  width: 110px;
+  height: 110px;
+  display: block;
+  margin: 0 auto;
+}
+
 #temperature {
   font-size: 70px;
   font-weight: bold;
