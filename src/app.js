@@ -6,7 +6,6 @@ function refreshWeather(response) {
   cityElement.innerHTML = response.data.city;
   temperatureElement.innerHTML = Math.round(temperature);
 
-  //unchecked
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
 
@@ -63,3 +62,32 @@ function cityReplacer(event) {
 
 let user_input_city = document.querySelector("#search-form");
 user_input_city.addEventListener("submit", cityReplacer);
+
+function displayForecast() {
+  let forecast = document.querySelector("#forecast");
+
+  let forecastDays = ["Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  let forecastHTML = "";
+
+  forecastDays.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2" id="col-2">
+    <div class="forecast-date">${day}</div>
+    <img
+      src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png"
+      alt="weather icon"
+      width="110"
+    />
+    <div class="forecast-temperatures">
+      <span class="maximum-forecast-temp">10°</span>
+      <span class="minimum-forecast-temp">1°</span>
+    </div>
+  </div>
+`;
+  });
+  forecast.innerHTML = forecastHTML;
+}
+
+searchCity("Columbus");
+displayForecast();
