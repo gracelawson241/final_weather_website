@@ -30,23 +30,24 @@
 
       <main>
         <div id="main">
-          <h1 class="city" id="city"></h1>
-          <p class="weather-breakdown">
-            <span id="time"></span>,
-            <span id="description"></span>
-            <br />
-            Humidity: <strong class="emphasis" id="humidity">00%</strong>, Wind:
-            <strong class="emphasis" id="windSpeed">00.00mi/h</strong>
-          </p>
+          <div>
+            <h1 class="city" id="city"></h1>
+            <p class="weather-breakdown">
+              <span id="time"></span>,
+              <span id="description"></span>
+              <br />
+              Humidity: <strong class="emphasis" id="humidity"></strong>, Wind:
+              <strong class="emphasis" id="windSpeed"></strong>
+            </p>
+          </div>
+          <div class="temperature-basics" id="temperature-basics">
+            <div id="weather-img"></div>
+            <div id="temperature">00</div>
+            <button id="unit">°F</button>
+          </div>
         </div>
-        <div class="temperature-basics">
-          <div id="weather-img"></div>
-          <div id="temperature">00</div>
-          <button id="unit">°F</button>
-        </div>
+        <div class="forecast" id="forecast"></div>
       </main>
-
-      <div class="forecast" id="forecast"></div>
 
       <footer>
         Coded by

@@ -9,9 +9,7 @@ header {
 
 main {
   border-bottom: 1px solid white;
-  display: flex;
-  justify-content: space-between;
-  padding: 5vh;
+  padding: 30px 0;
 }
 
 footer {
@@ -27,7 +25,7 @@ a {
   background: #92a1c3;
   max-width: 600px;
   margin: 45px auto;
-  padding: 20px;
+  padding: 30px;
   box-shadow: 0 30px 50px rgba(65, 50, 100, 0.1);
   border-radius: 16px;
   font-family: "Poppins", sans-serif;
@@ -65,16 +63,13 @@ a {
   font-size: 16px;
 }
 
-.weather-breakdown {
-  display: inline;
-}
-
 .weather-breakdown .emphasis {
   color: #d20062;
 }
 
-.temperature-basics {
+#temperature-basics {
   display: flex;
+  margin-left: 25%;
 }
 
 .forecast {
@@ -82,7 +77,6 @@ a {
   line-height: 50%;
   font-size: 13px;
   color: white;
-  border-bottom: 1px solid white;
   display: flex;
   margin-top: 15px;
   padding: 15px;
@@ -146,7 +140,7 @@ a {
 }
 
 #main {
-  display: block;
+  display: flex;
   justify-content: space-between;
   max-width: 70%;
 }
