@@ -6,6 +6,9 @@ function refreshWeather(response) {
   cityElement.innerHTML = response.data.city;
   temperatureElement.innerHTML = Math.round(temperature);
 
+  let unit = document.querySelector("#unit");
+  unit.innerHTML = "°F";
+
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
 
@@ -76,6 +79,8 @@ function cityReplacer(event) {
 
 let user_input_city = document.querySelector("#search-form");
 user_input_city.addEventListener("submit", cityReplacer);
+let unit_change_request = document.querySelector("#unit");
+unit_change_request.addEventListener("click", unitReplacer);
 
 function getForecast(city) {
   let apiKey = "faa6632e6o4d4eb073bt724d3e3780ff";
@@ -114,3 +119,29 @@ function displayForecast(response) {
 
 searchCity("Columbus");
 getForecast("Columbus");
+
+function fahrenheit_to_celsius(response) {
+  let temperatureElement = document.querySelector("#temperature");
+  let temperature = response.data.temperature.current;
+  temperatureElement.innerHTML = Math.round(temperature);
+
+  let unit = document.querySelector("#unit");
+  unit.innerHTML = "°C";
+
+  let unit_change_request = document.querySelector("#unit");
+  unit_change_request.addEventListener("click", cityReplacer);
+}
+
+function changeUnit(city) {
+  let apiKey = "faa6632e6o4d4eb073bt724d3e3780ff";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(fahrenheit_to_celsius);
+}
+
+function unitReplacer(event) {
+  event.preventDefault();
+  let searchInput = document.querySelector("#search-input");
+  let cityElement = document.querySelector(".city");
+  changeUnit(searchInput.value);
+}
