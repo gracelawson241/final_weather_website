@@ -68,6 +68,7 @@ a {
 
 .weather-breakdown {
   line-height: 24px;
+  display: block;
 }
 
 .weather-breakdown .emphasis {
@@ -78,7 +79,6 @@ a {
   display: flex;
   margin: 45px;
   width: 80vw;
-  justify-content: right;
 }
 
 .forecast {
