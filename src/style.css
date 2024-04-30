@@ -1,5 +1,6 @@
 body {
   background-color: #bed1e3;
+  font-family: "Poppins", sans-serif;
 }
 
 header {
@@ -10,6 +11,7 @@ header {
 main {
   border-bottom: 1px solid white;
   padding: 30px 0;
+  display: block;
 }
 
 footer {
@@ -23,13 +25,14 @@ a {
 
 .weather-app {
   background: #92a1c3;
-  max-width: 600px;
+  max-width: fit-content;
   margin: 45px auto;
   padding: 30px;
   box-shadow: 0 30px 50px rgba(65, 50, 100, 0.1);
   border-radius: 16px;
   font-family: "Poppins", sans-serif;
   color: white;
+  justify-content: center;
 }
 
 .search-form {
@@ -63,39 +66,43 @@ a {
   font-size: 16px;
 }
 
+.weather-breakdown {
+  line-height: 24px;
+}
+
 .weather-breakdown .emphasis {
   color: #d20062;
 }
 
 #temperature-basics {
   display: flex;
-  margin-left: 25%;
+  margin: auto 45px;
+  max-width: fit-content;
 }
 
 .forecast {
-  text-align: center;
-  line-height: 50%;
-  font-size: 13px;
   color: white;
   display: flex;
   margin-top: 15px;
-  padding: 15px;
-  justify-content: center;
-  max-width: 600px;
+  text-align: center;
+  justify-content: space-between;
+  margin: 45px auto;
 }
 
 .forecast-date {
   font-size: 16px;
   opacity: 0.5;
-  line-height: 5px;
+  line-height: 10px;
   margin-bottom: 5px;
 }
 
 .maximum-forecast-temp {
+  font-size: 13px;
   opacity: 100%;
 }
 
 .minimum-forecast-temp {
+  font-size: 13px;
   opacity: 0.5;
 }
 
@@ -122,10 +129,8 @@ a {
   background-color: #92a1c3;
   border: none;
   border-radius: 3px;
-  padding: 10px;
-  height: 45px;
-  width: 45px;
-  position: relative;
+  margin-bottom: 30%;
+  max-width: 70%;
 }
 
 #unit:hover {
